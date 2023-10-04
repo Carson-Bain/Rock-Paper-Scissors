@@ -3,7 +3,6 @@ let player;
 let playerScore = 0;
 let computerScore = 0;
 
-
 function getComputerChoice() {
     const randNum = Math.floor(Math.random() * 3 + 1);
 
@@ -18,18 +17,15 @@ function getComputerChoice() {
             computer = "Scissors";
             break;
     }
-    console.log(computer);
+    return computer;
 }
 
 function getPlayerChoice() {
     player = prompt("Pick: Rock, Paper, or Scissors: ");
     
-    console.log(player);
+    return player;
 }
 
-// this is my playRound Function. May change player to Playerselection and computer to Computerselection 
-// const playerSelcetion = getPlayerChoice() or just player
-// const computerSelection =  get computerChoice()
 function checkWinner() {
     if (player == computer) {
         return "Tie!"; 
@@ -50,20 +46,21 @@ function getScore() {
     }
 }
 
-
-
-
-function game() {
-    getPlayerChoice();
-    getComputerChoice();
+function playRound() {
+    console.log(getPlayerChoice());
+    console.log(getComputerChoice());
     console.log(checkWinner());
     getScore();
 }
 
 
+function game() {
+    playRound();
+    playRound(); 
+    playRound(); 
+    playRound(); 
+    playRound();  
+}
+
 game();
-
-
-
-
 
