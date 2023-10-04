@@ -46,6 +46,7 @@ function game() {
     let scorePlayer = 0;
     let scoreComputer = 0;
     console.log("Welcome!");
+    console.log("------------")
     for (let i = 0; i < 5; i++) {
        const playerSelction = getPlayerChoice();
        const computerSelection = getComputerChoice();
@@ -58,6 +59,7 @@ function game() {
         }
     }
     console.log("Game Over!")
+    console.log("------------")
     if (scorePlayer > scoreComputer) {
         console.log(`Player was the winner with ${scorePlayer} points`);
     } else if (scorePlayer < scoreComputer) {
